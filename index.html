@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Bastos</title>
+    <script src="https://kit.fontawesome.com/e07877f10b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TrabalhoWEB/fotoMinha.jpeg">
+    <!-- ------------------------------------------------------------ -->    
+    <style>
+        *{box-sizing: border-box;
+            }
+    .row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    [class *="col-"] {
+        float: left;
+        padding: 15px;
+    }
+    col-1 {width: 8.33%;}
+    col-2 {width: 16.66%;}
+    col-3 {width: 25%;}
+    col-4 {width: 33.33%;}
+    col-5 {width: 41.66%;}
+    col-6 {width: 50%;}
+    col-7 {width: 58.33%;}
+    col-8 {width: 66.66%;}
+    col-9 {width: 75%;}
+    col-10 {width: 83.33%;}
+    col-11 {width: 91.66%;}
+    col-12 {width: 100%;}
+
+    @media only screen and (max-widht: 768px) {
+        [ class *="col-"]{
+            width: 100%;
+        }
+    }
+    /*---------------------------------------------------------------------*/
+    </style>
+</head>
+<body>
+    <header> 
+    <div class="header-container">
+    
+    <div class="menu">
+        <nav>
+            <a href="#About">Sobre mim</a>
+            <a href="#Experience">Experiência</a>
+            <a href="#Family">Familia</a>
+            <a href="#Contact">Contato</a>
+        </nav>
+
+    </div>
+     <!-- vou constar os links e botões para as redes sociais. Coloquei o para abrir os links em ourta guia, diferente da atual. -->
+    <div class="sociais">
+        <!-- link instagram -->
+        <button><a href="https://www.instagram.com/th1agobastos" target="_blank"><i class="fa-brands fa-instagram"></i></a></button>
+        <!-- link linkedin -->
+        <button><a href="https://www.linkedin.com/in/thiago-bastos-esposito" target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
+        <!-- o WhatsApp eu vou deixar sem link, somente com o botão sem fazer nada -->
+        <button><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    </div>
+    </header>
+
+    <div class="boxDegrade">
+   <main>
+        <!-- falando sobre mim e colocando a foto(card)-->
+        <section id="About" class="section-about">
+            <div class="about-content">
+                <div class="container-new">
+                    <div class="flip">
+                        <div class="frente"></div> <!-- frente-->
+                        <div class="verso">
+                            <p>Isso mesmo, este sou eu!</p>
+                        </div> <!-- verso-->
+                    </div><!-- flip-->
+                </div><!-- container-new-->
+                <div class="about-text">
+                    <h2>Quem eu sou?</h2>
+                    <br>
+                    <p> Olá, eu sou Thiago, moro em Pouso Alegre no estado de Minas Gerais. Sou estudante de engenharia de software, estou no terceiro período da faculdade. </p>
+                    <p>Antes de começar a fazer o curso, pesquisei sobre me surpreendi. Aliás, é uma área que eu não me imaginava. </p>
+                    <p>O contato que tenho com a engenharia de software é academica, antes de começar, eu nunca precisei usar qualquer linguagem de programação. Confesso que no começo eu tive dificuldade, pela falta de experiência e tempo, porém, acredito que estou me desenvolvendo e me organizando melhor.</p>
+                    <p>Tenho uma profunda paixão por explorar, aprender e acompanhar os últimos avanços tecnológicos. Se você tiver alguma dica, pergunta, observação ou sugestão, sinta-se à vontade para entrar em contato comigo por mensagem ou e-mail. Estou ansioso para participar de discussões e me manter atualizado nesse campo dinâmico! </p>
+                    
+                </div> 
+            </div>
+        </section>   
+        
+        <!-- falando da minha experiencia-->
+        <div class="section-experience">
+            <section id="Experience">
+                <h2>Qual a minha experiência profissional?</h2>
+                <br>
+                <p> Estou fazendo uma transição de carreira. E dá medo hein?!
+                <p>Em termos de experiência profissional, trabalho como escrevente do cartório em minha cidade, enquanto simultaneamente equilibro meus estudos universitários e cursos relacionados à tecnologia. Minha trajetória no mercado de trabalho começou aos 14 anos, atuando como aprendiz em indústrias e comércios. Ao longo dos anos, fiz diversos cursos, principalmente nas áreas administrativa e de vendas, até atingir a maioridade e garantir um cargo na empresa onde ainda estou empregado.</p>
+                <p>Falo inglês (não é fluente, ok?!) por diversão. Aprendi vendo filmes e séries. No meu serviço eu tenho contato com alguns estrangeiros e, como se diz, sai uma conversa ou outra, se ele não falar tão rápido, é claro! Agora leitura e escritura, sou bem tranquilo!</p>
+                </p>
+                <br><br><br><br><br>
+            </section> 
+        </div>
+        <!--falando da minha familia-->
+        <section id="Family" class="section-family">
+            <div class="family-content">
+                <div class="family-text">
+                    <h2>Esta é minha família, por enquanto...</h2>
+                    <p>Sou casado já faz 1 ano, o que para mim parece que faz muito tempo, porém, só parece mesmo, eu já tinha começado a faculdade na época e nem estou na metade ainda (brincadeiras à parte). Está é minha familia, por enquanto... Porque eu estou esperando meu primeiro filho, e estou bem animado, mais um corinthiano para a familia (não se engane com o verde).</p>
+                </div>
+                <div class="container-new">
+                    <div class="flip">
+                        <div class="frente-family"></div> <!-- frente-->
+                        <div class="verso">
+                            <p>Isso mesmo, este sou eu e minha esposa!</p>
+                        </div> <!-- verso-->
+                    </div><!-- flip-->
+                </div><!-- container-new-->
+            </div>
+        </section>
+
+       <!--formulario para fazer contato-->
+        <div class="section-contact">
+            <section id="Contact">
+                <br><br><br><br>
+                <h2>Contato</h2>
+                <br><br><br><br>
+                <form action="" method="">
+                    <table>
+                        <tr>
+                            <th> <label for="nome">Nome</label></th>
+                            <td> <input type="text" name="nome" id="nome"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="email">E-mail</label></th>
+                            <td><input type="email" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="msg">Digite sua mensagem</label></th>
+                            <td><textarea name="msg" rows="10" cols="80"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button>Enviar</button></td>
+                        </tr>
+                    </table>
+                </form>
+             </section>
+        </div> 
+        </main>
+    </div> <!-- box degrade-->
+
+    <!-- fiz um rodapé básico-->
+    <footer class="footer">
+        <p> Criado e editado por Thiago Bastos Esposito - estudante de engenharia de software - Uninter - 2024</p>
+    </footer>
+
+    
+
+
+</body>
+</html>

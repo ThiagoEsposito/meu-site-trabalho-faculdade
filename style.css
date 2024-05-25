@@ -1,0 +1,278 @@
+/*importando fonte para o cabeçalho obs: (acabou que não usei a fonte)*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'titillium Web', sans-serif;
+    
+}
+.container {
+    color: white;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+
+}
+
+header {
+    display: fixed;
+    /*estilizando cabeçalho*/
+    font-family: cursive;
+    font-style: normal;
+    height: 140px;
+    background: black;
+    padding-top: 55px;
+    width: 100%;
+    z-index: 1000;
+    }
+
+.logo, .sociais {
+    width: 25%;
+}
+
+
+.menu {
+    width: 100%;
+    text-align: end;
+}
+/*não estava conseguindo arrumar o cabeçalho, pois estava desconfigurando, então retirei alguns alinhamentos e fiz uma estilização própria do .sociais.*/
+.sociais{
+    width: 15%;
+    text-align: end;
+
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 18px;
+    position: relative;
+        
+}
+/*estilizando o after (para efeito) do menu.*/
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #01462b, #05d887);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+/* para o efeito quando passa em cima do menu*/
+.menu nav a:hover::after {
+width: 30px;
+
+}
+
+/* configuração dos icones em geral*/
+.sociais button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #05d887;
+    border-radius: 100px;
+    background-image: linear-gradient(45deg, #01462b, #05d887);
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/*configuração dos icones, entre eles.*/
+.sociais button i {
+    align-items: center;
+    padding: 15%;
+    width: 25px;
+    height: 25px;
+    color: antiquewhite;
+}
+
+/*para dar um efeito quando passar em cima dos icones*/
+.sociais i:hover {
+    box-shadow: 0px 0px 10px 8px #05d887,
+    inset 0px 0px 10px 2px #05d887;
+    border-radius: 15px;
+    transform: scale(1.05);
+}
+
+/*vou fazer um fundo degradê, ou seja, que muda a cor de fundo de forma devagar e leve*/
+.boxDegrade {
+    width: 100%;
+    padding: 300px 0;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to left, #01462b, #05d887);
+    background-size: 500% 100%;
+    animation: degrade 5s infinite alternate;
+    }
+@keyframes degrade {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+
+/*vou alterar (estilizar) a barra de rolagem (não funciona em todos os navegadores)*/
+::-webkit-scrollbar{
+width: 10px;
+background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: #01462b;
+}
+
+body .container-new{
+    height: 70vh;
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    
+}
+.container-new {
+    position: relative;
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    margin-top: -290px; /*Move o container para cima*/
+    margin-right: -100px; /*Move o container para a direita*/
+    
+}
+    
+.container-new:hover .flip {
+    transform: rotateY(180deg);
+}
+/*é um efeito que vou adicionar na foto que quando passar o mouse nela (hover), ela vai virar, como se fosse um card.*/
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+}
+/*todos os cards*/
+.frente, .frente-family, .verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(8, 8, 8);
+    backface-visibility: hidden;
+}
+/* somente o primeiro card (fotoMinha)*/
+.frente {
+    background-image: url(TrabalhoWEB/fotoMinha.jpeg);
+    background-size: cover;
+}
+/*somente o segundo card (fotoFamilia)*/
+.frente-family {
+    background-image: url(TrabalhoWEB/fotoFamilia.jpeg);
+    background-size: cover;
+    
+    
+}
+/*verso dos cards, quando ele virar*/
+.verso {
+    background-color: transparent;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    }
+/*------------------------------------------------------------------*/
+    .section-about, .section-experience, .section-family, .section-contact {
+        /*padding: 20px;*/
+        width: 80%;
+        margin: 20px auto;
+        background-color: transparent;
+        border-radius: 10px;
+        text-align: justify;
+    }
+    
+    .section-about {
+        display: flex;
+        align-content: end;
+        padding-top: -50px;
+        padding-right: 10px;
+        
+    }
+
+    .section-about .about-text {
+        margin-top: -300px; 
+        margin-left: 0; 
+    }
+
+    .about-content, .family-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .about-text, .family-text {
+        width: 50%;
+    }
+    
+    .section-family .container-new {
+        order: 2;
+    }
+.section-family {
+    display: flex;
+    text-align: justify;
+    order: 2;
+        width: 65%;
+        margin-right: 10%;
+}
+
+    .section-experience{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: justify;
+        margin-top: 120px; 
+        order: 2;
+        width: 65%;
+        margin-right: 50%;
+    }
+
+    .section-contact{
+        width: 50%;
+        height: 50%;
+        font-style: italic;
+        color: black;
+        background-color: transparent;
+
+        
+    }
+    
+/*--------------------------------------*/
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    height: 50px;
+    width: 100%;
+    
+}
